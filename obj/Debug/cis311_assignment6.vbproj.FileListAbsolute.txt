@@ -1,0 +1,13 @@
+C:\Users\gaffn\source\repos\cis311_assignment6\obj\Debug\cis311_assignment6.vbprojAssemblyReference.cache
+C:\Users\gaffn\source\repos\cis311_assignment6\obj\Debug\cis311_assignment6.frmMDIParent.resources
+C:\Users\gaffn\source\repos\cis311_assignment6\obj\Debug\cis311_assignment6.Resources.resources
+C:\Users\gaffn\source\repos\cis311_assignment6\obj\Debug\cis311_assignment6.vbproj.GenerateResource.cache
+C:\Users\gaffn\source\repos\cis311_assignment6\bin\Debug\cis311_assignment6.exe.config
+C:\Users\gaffn\source\repos\cis311_assignment6\bin\Debug\cis311_assignment6.exe
+C:\Users\gaffn\source\repos\cis311_assignment6\bin\Debug\cis311_assignment6.pdb
+C:\Users\gaffn\source\repos\cis311_assignment6\bin\Debug\cis311_assignment6.xml
+C:\Users\gaffn\source\repos\cis311_assignment6\obj\Debug\cis311_assignment6.exe
+C:\Users\gaffn\source\repos\cis311_assignment6\obj\Debug\cis311_assignment6.xml
+C:\Users\gaffn\source\repos\cis311_assignment6\obj\Debug\cis311_assignment6.pdb
+C:\Users\gaffn\source\repos\cis311_assignment6\obj\Debug\cis311_assignment6.frmChild.resources
+C:\Users\gaffn\source\repos\cis311_assignment6\obj\Debug\cis311_assignment6.frmAbout.resources
