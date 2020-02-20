@@ -7,9 +7,9 @@
 '------------------------------------------------------------
 '- File Purpose:                                            -
 '- This file contains the implementation of clsShape for    -
-'- a rectangle                                              -
+'- a square                                                 -
 '------------------------------------------------------------	
-Public Class clsRectangle : Inherits clsShape
+Public Class clsSquare : Inherits clsShape
     '------------------------------------------------------------
     '-                Subprogram Name: New                      -
     '------------------------------------------------------------
@@ -18,9 +18,9 @@ Public Class clsRectangle : Inherits clsShape
     '------------------------------------------------------------
     '- Subprogram Purpose:                                      -
     '-                                                          -
-    '- This subroutine is called on the creation of a new       -
-    '- rectangle it will set the name, variable names,          -
-    '- and formula names for the rectangle                      -    
+    '- This subroutine is called on the creation of a new square-
+    '- it will set the name, variable names, and formula names  -
+    '- for the square.
     '------------------------------------------------------------
     '- Parameter Dictionary (in parameter order):               -
     '- (None)                                                   -
@@ -29,9 +29,8 @@ Public Class clsRectangle : Inherits clsShape
     '- (None)                                                   -
     '------------------------------------------------------------
     Public Sub New()
-        MyBase.SetstrName("2D - Rectangle")
+        MyBase.SetstrName("2D - Square")
         MyBase.GetstrMeasurementVariables.Add("Length")
-        MyBase.GetstrMeasurementVariables.Add("Width")
         MyBase.GetstrFormulaTypes.Add("Perimeter")
         MyBase.GetstrFormulaTypes.Add("Area")
     End Sub
@@ -44,26 +43,23 @@ Public Class clsRectangle : Inherits clsShape
     '- Subprogram Purpose:                                      -
     '-                                                          -
     '- This subroutine provides the implementation from clsShape–
-    '- for finding the Perimeter of a rectangle                 -
+    '- for finding the Perimeter of a square                    -
     '------------------------------------------------------------
     '- Parameter Dictionary (in parameter order):               -
     '- vairables()- contains the variables being sent to the    -
     '- function. In this case it contains                       -
     '- 0 -length                                                -
-    '- 1 - width                                                -
     '------------------------------------------------------------
     '- Local Variable Dictionary (alphabetically):              -
-    '- dbLength - contains the length of the rectangle          -
-    '- dblWidth - contains the width of the rectangle           -
+    '- dbLength - contains the length of the square             -   
     '------------------------------------------------------------
     '- Returns:                                                 -
-    '- Double - the perimeter of the rectangle                  -
-    '- 2(lenght + width)                                        -
+    '- Double - the perimeter of the square                     -
+    '- length+length+length+length                              -
     '------------------------------------------------------------
-    Public Overrides Function funPerimeterCircumferenceVolume(ByVal ParamArray variables() As Double) As Double
+    Public Overrides Function funPerimeterCircumferenceVolume(ParamArray variables() As Double) As Double
         Dim dblLength As Double = variables(0)
-        Dim dblWidth As Double = variables(1)
-        Return 2 * (dblLength + dblWidth)
+        Return 4 * dblLength
     End Function
     '------------------------------------------------------------
     '-    Subprogram Name: funAreaSurfaceArea                   -
@@ -74,25 +70,22 @@ Public Class clsRectangle : Inherits clsShape
     '- Subprogram Purpose:                                      -
     '-                                                          -
     '- This subroutine provides the implementation from clsShape–
-    '- for finding the area of a rectangle                      -
+    '- for finding the area of a square                         -
     '------------------------------------------------------------
     '- Parameter Dictionary (in parameter order):               -
     '- vairables()- contains the variables being sent to the    -
     '- function. In this case it contains                       -
-    '- 0 - length                                               -
-    '- 1 - width                                                -
+    '- 0 -length                                                -
     '------------------------------------------------------------
     '- Local Variable Dictionary (alphabetically):              -
-    '- dbLength - contains the length of the rectangle          -
-    '- dblWidth - contains the width of the rectangle           -
+    '- dbLength - contains the length of the square             -   
     '------------------------------------------------------------
     '- Returns:                                                 -
-    '- Double - the perimeter of the rectangle                  -
-    '- length * width                                           -
+    '- Double - the perimeter of the square                     -
+    '- length^2                                                 -
     '------------------------------------------------------------
-    Public Overrides Function funAreaSurfaceArea(ByVal ParamArray variables() As Double) As Double
+    Public Overrides Function funAreaSurfaceArea(ParamArray variables() As Double) As Double
         Dim dblLength As Double = variables(0)
-        Dim dblWidth As Double = variables(1)
-        Return dblLength * dblWidth
+        Return Math.Pow(dblLength, 2)
     End Function
 End Class
