@@ -73,6 +73,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsCircle.vb" />
+    <Compile Include="clsCube.vb" />
     <Compile Include="clsRectangle.vb" />
     <Compile Include="clsRightTriangle.vb" />
     <Compile Include="clsShape.vb" />
