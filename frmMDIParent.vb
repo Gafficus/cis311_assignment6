@@ -6,9 +6,10 @@ Public Class frmMDIParent
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles mnuFileNew.Click
         ' Create a new instance of the child form.
-        Dim ChildForm As New frmChild
         ' Make it a child of this MDI form before showing it.
-        ChildForm.MdiParent = Me
+        Dim ChildForm As New frmChild With {
+            .MdiParent = Me
+        }
 
         m_ChildFormNumber += 1
         ChildForm.Text = "Window " & m_ChildFormNumber

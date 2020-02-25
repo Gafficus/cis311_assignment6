@@ -45,6 +45,35 @@ Public Class frmChild
         txtSelectedTextBox = sender
     End Sub
 
+    Private Sub frmChild_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim lstUdtShapes As New List(Of clsShape)
+        lstUdtShapes.Add(New clsRectangle)
+        lstUdtShapes.Add(New clsSquare)
+        lstUdtShapes.Add(New clsRightTriangle)
+        lstUdtShapes.Add(New clsCircle)
+        lstUdtShapes.Add(New clsCube)
+        lstUdtShapes.Add(New clsSphere)
+        lstUdtShapes.Add(New clsCylinder)
+        lstUdtShapes.Add(New clsCone)
+
+        For Each shape In lstUdtShapes
+            lstShapes.Items.Add(shape)
+        Next
+    End Sub
+
+    Private Sub lstFormulas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstFormulas.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub lstShapes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstShapes.SelectedIndexChanged
+        lstFormulas.Items.Clear()
+        With lstShapes.SelectedItem
+            For Each s In .GetstrFormulaTypes()
+                lstFormulas.Items.Add(s)
+            Next
+        End With
+    End Sub
+
 #Enable Warning IDE1006 ' Naming Styles
 
 End Class

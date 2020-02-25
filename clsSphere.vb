@@ -1,24 +1,24 @@
 ﻿'------------------------------------------------------------
-'-                File Name : clsCube                       - 
+'-                File Name : clsSphere                     - 
 '-                Part of Project: Assign6                  -
 '------------------------------------------------------------
 '-                Written By: Nathan Gaffney                -
-'-                Written On: 23 Feb 2020                   -
+'-                Written On: 24 Feb 2020                   -
 '------------------------------------------------------------
 '- File Purpose:                                            -
 '- This file contains the implementation of clsShape for    -
-'- a cube                                                   -
+'- a sphere                                                 -
 '------------------------------------------------------------	
-Public Class clsCube : Inherits clsShape
+Public Class clsSphere : Inherits clsShape
     '------------------------------------------------------------
     '-                Subprogram Name: New                      -
     '------------------------------------------------------------
     '-                Written By: Nathan Gaffney                -
-    '-                Written On: 23 Feb 2020                   -
+    '-                Written On: 24 Feb 2020                   -
     '------------------------------------------------------------
     '- Subprogram Purpose:                                      -
     '-                                                          -
-    '- This subroutine is on creation of a cls Circle           -
+    '- This subroutine is on creation of a cls Sphere           -
     '- object instanteation. It will set the name of the obj    -
     '- to the proper string and set the string of variables     -
     '- to contain a radius and set the name of the formula to   -
@@ -31,10 +31,8 @@ Public Class clsCube : Inherits clsShape
     '- (None)                                                   -
     '------------------------------------------------------------
     Public Sub New()
-        MyBase.SetstrName("3D - Cube")
-        MyBase.GetstrMeasurementVariables.Add("Height")
-        MyBase.GetstrMeasurementVariables.Add("Width")
-        MyBase.GetstrMeasurementVariables.Add("Length")
+        MyBase.SetstrName("3D - Sphere")
+        MyBase.GetstrMeasurementVariables.Add("Radius")
         MyBase.GetstrFormulaTypes.Add("Volume")
         MyBase.GetstrFormulaTypes.Add("Surface Area")
     End Sub
@@ -52,24 +50,18 @@ Public Class clsCube : Inherits clsShape
     '- Parameter Dictionary (in parameter order):               -
     '- vairables()- contains the variables being sent to the    -
     '- function. In this case it contains                       -
-    '- 0 - Height                                               -
-    '- 1 - Width                                                -
-    '- 2 - Length                                               -
+    '- 0 - Radius                                               -
     '------------------------------------------------------------
     '- Local Variable Dictionary (alphabetically):              -
-    '- dblHeight - holds the height of the cube                 -
-    '- dblLength - holds the Length of the cube                 -
-    '- dblWidth -  holds the width of the cube                  -
+    '- dblRadius - hold the value of the radius                 -
     '------------------------------------------------------------
     '- Returns:                                                 -
-    '- Double - the Volume of the cube                          -
-    '- height * width * length                                  -
+    '- Double - the Volume of the sphere                        -
+    '- 4/3 * pi * r^3                                           -
     '------------------------------------------------------------
     Public Overrides Function funPerimeterCircumferenceVolume(ParamArray variables() As Double) As Double
-        Dim dblHeight As Double = variables(0)
-        Dim dblWidth As Double = variables(1)
-        Dim dblLength As Double = variables(2)
-        Return dblHeight * dblLength * dblWidth
+        Dim dblRadius As Double = variables(0)
+        Return (4 * Math.PI * Math.Pow(dblRadius, 3)) / (3)
     End Function
     '------------------------------------------------------------
     '-                Subprogram Name: funAreaSurfaceArea       -
@@ -79,28 +71,22 @@ Public Class clsCube : Inherits clsShape
     '------------------------------------------------------------
     '- Subprogram Purpose:                                      -
     '-                                                          -
-    '- This function will calculate the surface area of a cube  -
+    '- This function will calculate the surface area of a sphere-
     '------------------------------------------------------------
     '- Parameter Dictionary (in parameter order):               -
     '- vairables()- contains the variables being sent to the    -
     '- function. In this case it contains                       -
-    '- 0 - Height                                               -
-    '- 1 - Width                                                -
-    '- 2 - Length                                               -
+    '- 0 - Radius                                               -
     '------------------------------------------------------------
     '- Local Variable Dictionary (alphabetically):              -
-    '- dblHeight - holds the height of the cube                 -
-    '- dblLength - holds the Length of the cube                 -
-    '- dblWidth -  holds the width of the cube                  -
+    '- dblRadius - holds the radius value of the sphere         -
     '------------------------------------------------------------
     '- Returns:                                                 -
-    '- Double - the area of the circle                          -
-    '- 2LW + 2LH + 2WH                                          -
+    '- Double - the surface area of the sphere                  -
+    '- 4 * pi * r^2                                             -
     '------------------------------------------------------------
     Public Overrides Function funAreaSurfaceArea(ParamArray variables() As Double) As Double
-        Dim dblHeight As Double = variables(0)
-        Dim dblWidth As Double = variables(1)
-        Dim dblLength As Double = variables(2)
-        Return (2 * dblLength * dblWidth) + (2 * dblLength * dblHeight) + (2 * dblWidth * dblHeight)
+        Dim dblRadius As Double = variables(0)
+        Return (4 * Math.PI * Math.Pow(dblRadius, 2))
     End Function
 End Class

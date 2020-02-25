@@ -10,8 +10,8 @@
 '- class.
 '------------------------------------------------------------	
 Public MustInherit Class clsShape
-    Private _strMeasurementVariables As List(Of String)
-    Private _strFormulaTypes As List(Of String)
+    Private _strMeasurementVariables As New List(Of String)
+    Private _strFormulaTypes As New List(Of String)
     Private _strName As String
     '------------------------------------------------------
     '- BEGIN GET AND SET FUNCTIONS
@@ -84,4 +84,8 @@ Public MustInherit Class clsShape
     '- Double - the area or surface area of the shape           -
     '------------------------------------------------------------
     Public MustOverride Function funAreaSurfaceArea(ByVal ParamArray variables() As Double) As Double
+
+    Public Overrides Function ToString() As String
+        Return _strName
+    End Function
 End Class

@@ -35,7 +35,7 @@ Partial Class frmChild
         Me.btn3 = New System.Windows.Forms.Button()
         Me.btn0 = New System.Windows.Forms.Button()
         Me.btnDot = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.picShape = New System.Windows.Forms.PictureBox()
         Me.btnC = New System.Windows.Forms.Button()
         Me.btnCE = New System.Windows.Forms.Button()
         Me.btnCalculate = New System.Windows.Forms.Button()
@@ -45,13 +45,17 @@ Partial Class frmChild
         Me.lblFirstVariable = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.grpConvertBox = New System.Windows.Forms.GroupBox()
+        Me.rdoUs = New System.Windows.Forms.RadioButton()
+        Me.rdoMetric = New System.Windows.Forms.RadioButton()
+        CType(Me.picShape, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpConvertBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'lstShapes
         '
         Me.lstShapes.FormattingEnabled = True
-        Me.lstShapes.Items.AddRange(New Object() {"2D - Rectangle", "2D - Square", "2D - Right Triangle", "2D - Circle", "3D - Cube", "3D - Sphere", "3D - Cylinder", "3D - Cone"})
         Me.lstShapes.Location = New System.Drawing.Point(12, 150)
         Me.lstShapes.Name = "lstShapes"
         Me.lstShapes.Size = New System.Drawing.Size(120, 95)
@@ -175,13 +179,13 @@ Partial Class frmChild
         Me.btnDot.Text = "."
         Me.btnDot.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'picShape
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(418, 191)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(206, 158)
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.picShape.Location = New System.Drawing.Point(418, 191)
+        Me.picShape.Name = "picShape"
+        Me.picShape.Size = New System.Drawing.Size(206, 158)
+        Me.picShape.TabIndex = 2
+        Me.picShape.TabStop = False
         '
         'btnC
         '
@@ -217,6 +221,7 @@ Partial Class frmChild
         Me.txtFirstVariable.Size = New System.Drawing.Size(206, 20)
         Me.txtFirstVariable.TabIndex = 5
         Me.txtFirstVariable.Text = "0"
+        Me.txtFirstVariable.Visible = False
         '
         'txtSecndVariable
         '
@@ -225,6 +230,7 @@ Partial Class frmChild
         Me.txtSecndVariable.Size = New System.Drawing.Size(206, 20)
         Me.txtSecndVariable.TabIndex = 6
         Me.txtSecndVariable.Text = "0"
+        Me.txtSecndVariable.Visible = False
         '
         'txtThirdVariable
         '
@@ -233,6 +239,7 @@ Partial Class frmChild
         Me.txtThirdVariable.Size = New System.Drawing.Size(206, 20)
         Me.txtThirdVariable.TabIndex = 7
         Me.txtThirdVariable.Text = "0"
+        Me.txtThirdVariable.Visible = False
         '
         'lblFirstVariable
         '
@@ -242,6 +249,7 @@ Partial Class frmChild
         Me.lblFirstVariable.Size = New System.Drawing.Size(66, 13)
         Me.lblFirstVariable.TabIndex = 8
         Me.lblFirstVariable.Text = "UnSelected:"
+        Me.lblFirstVariable.Visible = False
         '
         'Label2
         '
@@ -251,6 +259,7 @@ Partial Class frmChild
         Me.Label2.Size = New System.Drawing.Size(72, 13)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "UnSelected3:"
+        Me.Label2.Visible = False
         '
         'Label3
         '
@@ -260,12 +269,53 @@ Partial Class frmChild
         Me.Label3.Size = New System.Drawing.Size(72, 13)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "UnSelected2:"
+        Me.Label3.Visible = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(157, 71)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(147, 20)
+        Me.TextBox1.TabIndex = 9
+        '
+        'grpConvertBox
+        '
+        Me.grpConvertBox.Controls.Add(Me.rdoMetric)
+        Me.grpConvertBox.Controls.Add(Me.rdoUs)
+        Me.grpConvertBox.Location = New System.Drawing.Point(157, 97)
+        Me.grpConvertBox.Name = "grpConvertBox"
+        Me.grpConvertBox.Size = New System.Drawing.Size(147, 47)
+        Me.grpConvertBox.TabIndex = 10
+        Me.grpConvertBox.TabStop = False
+        Me.grpConvertBox.Text = "Convert Answer"
+        '
+        'rdoUs
+        '
+        Me.rdoUs.AutoSize = True
+        Me.rdoUs.Checked = True
+        Me.rdoUs.Location = New System.Drawing.Point(6, 19)
+        Me.rdoUs.Name = "rdoUs"
+        Me.rdoUs.Size = New System.Drawing.Size(14, 13)
+        Me.rdoUs.TabIndex = 0
+        Me.rdoUs.TabStop = True
+        Me.rdoUs.UseVisualStyleBackColor = True
+        '
+        'rdoMetric
+        '
+        Me.rdoMetric.AutoSize = True
+        Me.rdoMetric.Location = New System.Drawing.Point(74, 19)
+        Me.rdoMetric.Name = "rdoMetric"
+        Me.rdoMetric.Size = New System.Drawing.Size(14, 13)
+        Me.rdoMetric.TabIndex = 1
+        Me.rdoMetric.UseVisualStyleBackColor = True
         '
         'frmChild
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(693, 433)
+        Me.Controls.Add(Me.grpConvertBox)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lblFirstVariable)
@@ -275,7 +325,7 @@ Partial Class frmChild
         Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.btnCE)
         Me.Controls.Add(Me.btnC)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.picShape)
         Me.Controls.Add(Me.btn3)
         Me.Controls.Add(Me.btnDot)
         Me.Controls.Add(Me.btn0)
@@ -291,7 +341,9 @@ Partial Class frmChild
         Me.Controls.Add(Me.lstShapes)
         Me.Name = "frmChild"
         Me.Text = "frmChild"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picShape, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpConvertBox.ResumeLayout(False)
+        Me.grpConvertBox.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -310,7 +362,7 @@ Partial Class frmChild
     Friend WithEvents btn3 As Button
     Friend WithEvents btn0 As Button
     Friend WithEvents btnDot As Button
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents picShape As PictureBox
     Friend WithEvents btnC As Button
     Friend WithEvents btnCE As Button
     Friend WithEvents btnCalculate As Button
@@ -320,4 +372,8 @@ Partial Class frmChild
     Friend WithEvents lblFirstVariable As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents grpConvertBox As GroupBox
+    Friend WithEvents rdoUs As RadioButton
+    Friend WithEvents rdoMetric As RadioButton
 End Class

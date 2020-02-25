@@ -74,10 +74,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsCircle.vb" />
+    <Compile Include="clsCone.vb" />
     <Compile Include="clsCube.vb" />
+    <Compile Include="clsCylinder.vb" />
     <Compile Include="clsRectangle.vb" />
     <Compile Include="clsRightTriangle.vb" />
     <Compile Include="clsShape.vb" />
+    <Compile Include="clsSphere.vb" />
     <Compile Include="clsSquare.vb" />
     <Compile Include="frmAbout.Designer.vb">
       <DependentUpon>frmAbout.vb</DependentUpon>
