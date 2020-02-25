@@ -43,12 +43,12 @@ Partial Class frmChild
         Me.txtSecndVariable = New System.Windows.Forms.TextBox()
         Me.txtThirdVariable = New System.Windows.Forms.TextBox()
         Me.lblFirstVariable = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblThirdVariable = New System.Windows.Forms.Label()
+        Me.lblSecondVariable = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.grpConvertBox = New System.Windows.Forms.GroupBox()
-        Me.rdoUs = New System.Windows.Forms.RadioButton()
         Me.rdoMetric = New System.Windows.Forms.RadioButton()
+        Me.rdoUs = New System.Windows.Forms.RadioButton()
         CType(Me.picShape, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpConvertBox.SuspendLayout()
         Me.SuspendLayout()
@@ -251,25 +251,25 @@ Partial Class frmChild
         Me.lblFirstVariable.Text = "UnSelected:"
         Me.lblFirstVariable.Visible = False
         '
-        'Label2
+        'lblThirdVariable
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(347, 93)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 13)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "UnSelected3:"
-        Me.Label2.Visible = False
+        Me.lblThirdVariable.AutoSize = True
+        Me.lblThirdVariable.Location = New System.Drawing.Point(347, 93)
+        Me.lblThirdVariable.Name = "lblThirdVariable"
+        Me.lblThirdVariable.Size = New System.Drawing.Size(72, 13)
+        Me.lblThirdVariable.TabIndex = 8
+        Me.lblThirdVariable.Text = "UnSelected3:"
+        Me.lblThirdVariable.Visible = False
         '
-        'Label3
+        'lblSecondVariable
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(347, 55)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 13)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "UnSelected2:"
-        Me.Label3.Visible = False
+        Me.lblSecondVariable.AutoSize = True
+        Me.lblSecondVariable.Location = New System.Drawing.Point(347, 55)
+        Me.lblSecondVariable.Name = "lblSecondVariable"
+        Me.lblSecondVariable.Size = New System.Drawing.Size(72, 13)
+        Me.lblSecondVariable.TabIndex = 8
+        Me.lblSecondVariable.Text = "UnSelected2:"
+        Me.lblSecondVariable.Visible = False
         '
         'TextBox1
         '
@@ -289,6 +289,15 @@ Partial Class frmChild
         Me.grpConvertBox.TabStop = False
         Me.grpConvertBox.Text = "Convert Answer"
         '
+        'rdoMetric
+        '
+        Me.rdoMetric.AutoSize = True
+        Me.rdoMetric.Location = New System.Drawing.Point(74, 19)
+        Me.rdoMetric.Name = "rdoMetric"
+        Me.rdoMetric.Size = New System.Drawing.Size(14, 13)
+        Me.rdoMetric.TabIndex = 1
+        Me.rdoMetric.UseVisualStyleBackColor = True
+        '
         'rdoUs
         '
         Me.rdoUs.AutoSize = True
@@ -300,15 +309,6 @@ Partial Class frmChild
         Me.rdoUs.TabStop = True
         Me.rdoUs.UseVisualStyleBackColor = True
         '
-        'rdoMetric
-        '
-        Me.rdoMetric.AutoSize = True
-        Me.rdoMetric.Location = New System.Drawing.Point(74, 19)
-        Me.rdoMetric.Name = "rdoMetric"
-        Me.rdoMetric.Size = New System.Drawing.Size(14, 13)
-        Me.rdoMetric.TabIndex = 1
-        Me.rdoMetric.UseVisualStyleBackColor = True
-        '
         'frmChild
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -316,8 +316,8 @@ Partial Class frmChild
         Me.ClientSize = New System.Drawing.Size(693, 433)
         Me.Controls.Add(Me.grpConvertBox)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lblSecondVariable)
+        Me.Controls.Add(Me.lblThirdVariable)
         Me.Controls.Add(Me.lblFirstVariable)
         Me.Controls.Add(Me.txtThirdVariable)
         Me.Controls.Add(Me.txtSecndVariable)
@@ -370,8 +370,8 @@ Partial Class frmChild
     Friend WithEvents txtSecndVariable As TextBox
     Friend WithEvents txtThirdVariable As TextBox
     Friend WithEvents lblFirstVariable As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblThirdVariable As Label
+    Friend WithEvents lblSecondVariable As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents grpConvertBox As GroupBox
     Friend WithEvents rdoUs As RadioButton

@@ -62,16 +62,59 @@ Public Class frmChild
     End Sub
 
     Private Sub lstFormulas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstFormulas.SelectedIndexChanged
+        Dim intNumVariables As Integer = lstShapes.SelectedItem.GetstrMeasurementVariables().Count()
+        setUnitType(lstShapes.SelectedItem)
+        With lstShapes.SelectedItem
+            Select Case intNumVariables
+                Case 1
+                    lblFirstVariable.Visible = True
+                    lblFirstVariable.Text = .GetstrMeasurementVariables()(0)
+                    txtFirstVariable.Visible = True
+                Case 2
+                    lblFirstVariable.Visible = True
+                    lblFirstVariable.Text = .GetstrMeasurementVariables()(0)
+                    txtFirstVariable.Visible = True
+                    lblSecondVariable.Visible = True
+                    lblSecondVariable.Text = .GetstrMeasurementVariables()(1)
+                    txtSecndVariable.Visible = True
+                Case 3
+                    lblFirstVariable.Visible = True
+                    lblFirstVariable.Text = .GetstrMeasurementVariables()(0)
+                    txtFirstVariable.Visible = True
+                    lblSecondVariable.Visible = True
+                    lblSecondVariable.Text = .GetstrMeasurementVariables()(1)
+                    txtSecndVariable.Visible = True
+                    lblThirdVariable.Visible = True
+                    lblThirdVariable.Text = .GetstrMeasurementVariables()(2)
+                    txtThirdVariable.Visible = True
+                Case Else
+                    Debug.WriteLine("Error occured when showing the txtVariable boxes")
+            End Select
+        End With
 
     End Sub
 
     Private Sub lstShapes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstShapes.SelectedIndexChanged
         lstFormulas.Items.Clear()
+        subHideVariables()
         With lstShapes.SelectedItem
             For Each s In .GetstrFormulaTypes()
                 lstFormulas.Items.Add(s)
             Next
         End With
+    End Sub
+
+    Private Sub setUnitType(selectedItem As clsShape)
+        'rdoUs.Text = selectedItem.
+    End Sub
+
+    Private Sub subHideVariables()
+        lblFirstVariable.Visible = False
+        txtFirstVariable.Visible = False
+        lblSecondVariable.Visible = False
+        txtSecndVariable.Visible = False
+        lblThirdVariable.Visible = False
+        txtThirdVariable.Visible = False
     End Sub
 
 #Enable Warning IDE1006 ' Naming Styles

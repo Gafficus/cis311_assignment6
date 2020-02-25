@@ -12,9 +12,14 @@
 Public MustInherit Class clsShape
     Private _strMeasurementVariables As New List(Of String)
     Private _strFormulaTypes As New List(Of String)
+    Private _strUnitTypeMetric As New List(Of String)
+    Private _strUnitTypeUS As New List(Of String)
     Private _strName As String
+
+
     '------------------------------------------------------
     '- BEGIN GET AND SET FUNCTIONS
+
     Public Function GetstrFormulaTypes() As List(Of String)
         Return _strFormulaTypes
     End Function
