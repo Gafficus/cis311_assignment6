@@ -32,6 +32,7 @@ Public Class clsCircle : Inherits clsShape
     '------------------------------------------------------------
     Public Sub New()
         MyBase.SetstrName("2D - Circle")
+        MyBase.SetstrImagePath("circle.jpg")
         MyBase.GetstrMeasurementVariables.Add("Radius")
         MyBase.GetstrFormulaTypes.Add("Circumference")
         MyBase.GetstrFormulaTypes.Add("Area")

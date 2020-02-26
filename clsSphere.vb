@@ -32,6 +32,7 @@ Public Class clsSphere : Inherits clsShape
     '------------------------------------------------------------
     Public Sub New()
         MyBase.SetstrName("3D - Sphere")
+        MyBase.SetstrImagePath("sphere.jpg")
         MyBase.GetstrMeasurementVariables.Add("Radius")
         MyBase.GetstrFormulaTypes.Add("Volume")
         MyBase.GetstrFormulaTypes.Add("Surface Area")

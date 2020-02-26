@@ -45,7 +45,7 @@ Partial Class frmChild
         Me.lblFirstVariable = New System.Windows.Forms.Label()
         Me.lblThirdVariable = New System.Windows.Forms.Label()
         Me.lblSecondVariable = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtAnswer = New System.Windows.Forms.TextBox()
         Me.grpConvertBox = New System.Windows.Forms.GroupBox()
         Me.rdoMetric = New System.Windows.Forms.RadioButton()
         Me.rdoUs = New System.Windows.Forms.RadioButton()
@@ -181,9 +181,11 @@ Partial Class frmChild
         '
         'picShape
         '
+        Me.picShape.ImageLocation = ""
         Me.picShape.Location = New System.Drawing.Point(418, 191)
         Me.picShape.Name = "picShape"
-        Me.picShape.Size = New System.Drawing.Size(206, 158)
+        Me.picShape.Size = New System.Drawing.Size(213, 131)
+        Me.picShape.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picShape.TabIndex = 2
         Me.picShape.TabStop = False
         '
@@ -207,6 +209,7 @@ Partial Class frmChild
         '
         'btnCalculate
         '
+        Me.btnCalculate.Enabled = False
         Me.btnCalculate.Location = New System.Drawing.Point(321, 150)
         Me.btnCalculate.Name = "btnCalculate"
         Me.btnCalculate.Size = New System.Drawing.Size(40, 199)
@@ -271,12 +274,13 @@ Partial Class frmChild
         Me.lblSecondVariable.Text = "UnSelected2:"
         Me.lblSecondVariable.Visible = False
         '
-        'TextBox1
+        'txtAnswer
         '
-        Me.TextBox1.Location = New System.Drawing.Point(157, 71)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(147, 20)
-        Me.TextBox1.TabIndex = 9
+        Me.txtAnswer.Location = New System.Drawing.Point(157, 71)
+        Me.txtAnswer.Name = "txtAnswer"
+        Me.txtAnswer.ReadOnly = True
+        Me.txtAnswer.Size = New System.Drawing.Size(147, 20)
+        Me.txtAnswer.TabIndex = 9
         '
         'grpConvertBox
         '
@@ -294,8 +298,9 @@ Partial Class frmChild
         Me.rdoMetric.AutoSize = True
         Me.rdoMetric.Location = New System.Drawing.Point(74, 19)
         Me.rdoMetric.Name = "rdoMetric"
-        Me.rdoMetric.Size = New System.Drawing.Size(14, 13)
+        Me.rdoMetric.Size = New System.Drawing.Size(54, 17)
         Me.rdoMetric.TabIndex = 1
+        Me.rdoMetric.Text = "Metric"
         Me.rdoMetric.UseVisualStyleBackColor = True
         '
         'rdoUs
@@ -304,10 +309,11 @@ Partial Class frmChild
         Me.rdoUs.Checked = True
         Me.rdoUs.Location = New System.Drawing.Point(6, 19)
         Me.rdoUs.Name = "rdoUs"
-        Me.rdoUs.Size = New System.Drawing.Size(14, 13)
+        Me.rdoUs.Size = New System.Drawing.Size(46, 17)
         Me.rdoUs.TabIndex = 0
         Me.rdoUs.TabStop = True
-        Me.rdoUs.UseVisualStyleBackColor = True
+        Me.rdoUs.Text = "U.S."
+        Me.rdoUs.UseVisualStyleBackColor = False
         '
         'frmChild
         '
@@ -315,7 +321,7 @@ Partial Class frmChild
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(693, 433)
         Me.Controls.Add(Me.grpConvertBox)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtAnswer)
         Me.Controls.Add(Me.lblSecondVariable)
         Me.Controls.Add(Me.lblThirdVariable)
         Me.Controls.Add(Me.lblFirstVariable)
@@ -372,7 +378,7 @@ Partial Class frmChild
     Friend WithEvents lblFirstVariable As Label
     Friend WithEvents lblThirdVariable As Label
     Friend WithEvents lblSecondVariable As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtAnswer As TextBox
     Friend WithEvents grpConvertBox As GroupBox
     Friend WithEvents rdoUs As RadioButton
     Friend WithEvents rdoMetric As RadioButton

@@ -32,6 +32,7 @@ Public Class clsCone : Inherits clsShape
     '------------------------------------------------------------
     Public Sub New()
         MyBase.SetstrName("3D - Cone")
+        MyBase.SetstrImagePath("cone.jpg")
         MyBase.GetstrMeasurementVariables.Add("Radius")
         MyBase.GetstrMeasurementVariables.Add("Height")
         MyBase.GetstrFormulaTypes.Add("Volume")

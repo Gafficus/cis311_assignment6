@@ -32,6 +32,7 @@ Public Class clsCube : Inherits clsShape
     '------------------------------------------------------------
     Public Sub New()
         MyBase.SetstrName("3D - Cube")
+        MyBase.SetstrImagePath("cube.jpg")
         MyBase.GetstrMeasurementVariables.Add("Height")
         MyBase.GetstrMeasurementVariables.Add("Width")
         MyBase.GetstrMeasurementVariables.Add("Length")

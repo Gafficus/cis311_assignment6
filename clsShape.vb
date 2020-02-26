@@ -15,10 +15,18 @@ Public MustInherit Class clsShape
     Private _strUnitTypeMetric As New List(Of String)
     Private _strUnitTypeUS As New List(Of String)
     Private _strName As String
-
+    Private _strImageFilePath
 
     '------------------------------------------------------
     '- BEGIN GET AND SET FUNCTIONS
+
+    Public Function GetstrImagePath() As String
+        Return _strImageFilePath
+    End Function
+
+    Public Sub SetstrImagePath(AutoPropertyValue As String)
+        _strImageFilePath = AutoPropertyValue
+    End Sub
 
     Public Function GetstrFormulaTypes() As List(Of String)
         Return _strFormulaTypes

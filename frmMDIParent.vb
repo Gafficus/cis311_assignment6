@@ -1,6 +1,8 @@
 ﻿
 
 #Disable Warning IDE1006 ' Naming Styles
+Imports System.ComponentModel
+
 Public Class frmMDIParent
 #Enable Warning IDE1006 ' Naming Styles
 
@@ -33,7 +35,7 @@ Public Class frmMDIParent
         Me.LayoutMdi(MdiLayout.TileHorizontal)
     End Sub
 
-    Private Sub CloseAllToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles mnuWindowsCloseAll.Click
+    Private Sub CloseAllToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles mnuWindowsCloseAll.Click, Me.Closing
         ' Close all child forms of the parent.
         For Each ChildForm As Form In Me.MdiChildren
             ChildForm.Close()

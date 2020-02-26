@@ -30,6 +30,7 @@ Public Class clsRectangle : Inherits clsShape
     '------------------------------------------------------------
     Public Sub New()
         MyBase.SetstrName("2D - Rectangle")
+        MyBase.SetstrImagePath("rectangle.jpg")
         MyBase.GetstrMeasurementVariables.Add("Length")
         MyBase.GetstrMeasurementVariables.Add("Width")
         MyBase.GetstrFormulaTypes.Add("Perimeter")

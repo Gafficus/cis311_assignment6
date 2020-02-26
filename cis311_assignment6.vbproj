@@ -100,6 +100,7 @@
     <Compile Include="frmMDIParent.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="modGlobalConversion.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -144,6 +145,30 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\triangle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\circle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\cone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\cube.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\cylinder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\rectangle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sphere.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\square.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

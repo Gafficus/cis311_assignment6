@@ -22,5 +22,45 @@ cis311_assignment6
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:cis311_assignment6.My.Resources.Resources.circle">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:cis311_assignment6.My.Resources.Resources.cone">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:cis311_assignment6.My.Resources.Resources.cube">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:cis311_assignment6.My.Resources.Resources.cylinder">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:cis311_assignment6.My.Resources.Resources.rectangle">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:cis311_assignment6.My.Resources.Resources.sphere">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:cis311_assignment6.My.Resources.Resources.square">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:cis311_assignment6.My.Resources.Resources.triangle">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>

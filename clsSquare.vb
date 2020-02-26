@@ -30,6 +30,7 @@ Public Class clsSquare : Inherits clsShape
     '------------------------------------------------------------
     Public Sub New()
         MyBase.SetstrName("2D - Square")
+        MyBase.SetstrImagePath("square.jpg")
         MyBase.GetstrMeasurementVariables.Add("Length")
         MyBase.GetstrFormulaTypes.Add("Perimeter")
         MyBase.GetstrFormulaTypes.Add("Area")

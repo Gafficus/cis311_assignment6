@@ -32,6 +32,7 @@ Public Class clsCylinder : Inherits clsShape
     '------------------------------------------------------------
     Public Sub New()
         MyBase.SetstrName("3D - Cylinder")
+        MyBase.SetstrImagePath("cylinder.jpg")
         MyBase.GetstrMeasurementVariables.Add("Radius")
         MyBase.GetstrMeasurementVariables.Add("Height")
         MyBase.GetstrFormulaTypes.Add("Volume")

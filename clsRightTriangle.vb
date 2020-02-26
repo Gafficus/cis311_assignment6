@@ -32,6 +32,7 @@ Public Class clsRightTriangle : Inherits clsShape
     '------------------------------------------------------------
     Public Sub New()
         MyBase.SetstrName("2D - Right Triangle")
+        MyBase.SetstrImagePath("triangle.jpg")
         MyBase.GetstrMeasurementVariables.Add("Base")
         MyBase.GetstrMeasurementVariables.Add("Height")
         MyBase.GetstrFormulaTypes.Add("Perimeter")
