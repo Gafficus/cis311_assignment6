@@ -9,7 +9,7 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("Li'l Ole Calculator")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyDescription("This is a calculator application for assignment 6.")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("cis311_assignment6")>
 <Assembly: AssemblyCopyright("GNU General Public License")>
